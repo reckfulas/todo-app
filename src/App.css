@@ -104,6 +104,13 @@ button {
   
 }
 
+.buttonDelete {
+  border-radius: 10px;
+  position: absolute;
+  right: 70px;
+  
+}
+
 button:active {
   outline: none;
 }
@@ -143,4 +150,5 @@ button:active {
 
 .singleTask {
   margin-top: 15px;
+  width: 640px;
 }

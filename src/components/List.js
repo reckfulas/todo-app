@@ -8,7 +8,7 @@ class List extends Component {
         return (
             <div className="List">
                 { this.props.todoElements.map(( todo, index ) => {
-                    return ( <Task key ={  index } todo = { todo } handleClick = { this.props.handleClick } index = { index } /> )
+                    return ( <Task key ={  index } todo = { todo } handleDelete = { this.props.handleDelete } handleClick = { this.props.handleClick } index = { index } /> )
                  })  
                 }
             </div>

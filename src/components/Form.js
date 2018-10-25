@@ -3,9 +3,13 @@ import React, { Component } from 'react';
 class Form extends Component {
     render() {
         return (
-                <form onSubmit = { (e) => this.props.handleSubmit(e) }>
-                    <span className="textInput"><input type="text" onChange = { (e) => this.props.handleChange(e) } value = { this.props.inputValue } placeholder="Add your todo" /></span>
-                </form>
+                <div>
+                    <form onSubmit = { (e) => this.props.handleSubmit(e) }>
+                        <input type="text" onChange = { (e) => this.props.handleChange(e) } value = { this.props.inputValue } placeholder="Add your todo" />
+                    </form>
+                    <button onClick = { (e) => this.props.handleClean(e) }>Clean list</button>
+                </div>
+                
         );
     }
 }

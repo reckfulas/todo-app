@@ -21,6 +21,16 @@ class App extends Component {
     this.setState({ todoElements : elementsArray });
   }
 
+  handleClean = (e) => {
+    this.setState({ todoElements : [] });
+  }
+
+  handleDelete = (index) => {
+    const elementsArray = this.state.todoElements;
+    elementsArray.splice(index, 1);
+    this.setState({ todoElements : elementsArray });
+  }
+
   handleSubmit = (e) => {
     e.preventDefault(); 
     const newElement = {
@@ -38,8 +48,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div class="wrapper">
-          <div class="main">
+        <div className="wrapper">
+          <div className="main">
             <div className="">
               <div className="row">
                 <div className="col-sm-5 title-container">
@@ -53,9 +63,11 @@ class App extends Component {
                     handleChange = { this.handleChange } 
                     inputValue = { this.state.inputValue }
                     handleSubmit = { this.handleSubmit }
+                    handleClean = { this.handleClean }
                   />
                   <List 
                     handleClick = { this.handleClick }
+                    handleDelete = { this.handleDelete }
                     todoElements = { this.state.todoElements }
                   />
                 </div>
